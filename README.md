@@ -93,6 +93,19 @@ Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
  22. Find and run deviceQuery and ./bandwidthTest under ~/NVIDIA_CUDA-9.0_Samples, both should PASS.
  
  23. Reboot and login in to desktop. GPU driver and cuda are all set up now.
+ 
+ 24. Next step is to install cuDNN version 7.0 (make sure you download the right version for the CUDA toolkit). Link to download: https://developer.nvidia.com/rdp/cudnn-download
+ 
+   - Select cuDNN v7.0.5 (Dec 5, 2017), for CUDA 9.0 (At the time of writing tensorflow support cuDNN 7.0)
+   - Dowload cuDNN v7.0.5 Runtime Library for Ubuntu16.04 (Deb)
+   - Download cuDNN v7.0.5 Developer Library for Ubuntu16.04 (Deb)
+   - Download cuDNN v7.0.5 Code Samples and User Guide for Ubuntu16.04 (Deb)
+   
+25. 
+
+
+
+
 
 
 
