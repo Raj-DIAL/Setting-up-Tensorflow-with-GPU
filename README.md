@@ -118,7 +118,7 @@ Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
      - $sudo apt-get install libcupti-dev
      - $echo 'export LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
     
-  28. Install tensorflow with GPU support in virtualenv (Python 3)
+  28. Install tensorflow with GPU support in virtualenv (Python 3) (To install from source see ref 4)
   
       - $ sudo apt-get install python3-pip python3-dev python-virtualenv # for Python 3.n
       -  virtualenv --system-site-packages -p python3 targetDirectory # for Python 3.n (assume that targetDirectory is ~/tensorflow)
@@ -147,3 +147,6 @@ Reference:
 
 2. https://devtalk.nvidia.com/default/topic/878117/cuda-setup-and-installation/-solved-titan-x-for-cuda-7-5-login-loop-error-ubuntu-14-04-/1
 
+3. https://www.tensorflow.org/install/install_linux
+
+4. http://www.python36.com/install-tensorflow141-gpu/
