@@ -15,7 +15,7 @@ sudo apt-get install ubuntu-desktop
 5. Download the relevant run file for the cuda toolkit: https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=runfilelocal
 
 - Choose OS (linux)
-- Choose taget archiectecture (X86-64 bit)
+- Choose taget architecture (X86-64 bit)
 - Choose linux distribution (Ubuntu)
 - Choose version (16.04)
 - Choose run type (run file local)
