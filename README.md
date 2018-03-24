@@ -96,5 +96,8 @@ Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
 
 
 
+Reference:
+1. http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#introduction
 
+2. https://devtalk.nvidia.com/default/topic/878117/cuda-setup-and-installation/-solved-titan-x-for-cuda-7-5-login-loop-error-ubuntu-14-04-/1
 
