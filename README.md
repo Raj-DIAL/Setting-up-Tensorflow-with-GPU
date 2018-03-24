@@ -20,7 +20,7 @@ sudo apt-get install ubuntu-desktop
 - Choose version (16.04)
 - Choose run type (run file local)
 
-  Download the file "cuda_9.0.176_384.81_linux.run" (Note: This file name depends on the version you want to install)
+  Download the file "cuda_9.0.176_384.81_linux.run" (Note: This file name depends on the version you want to install)[About 1.6GB in size]
   
  6. Open a terminal and run $sudo apt-get install build-essential. This will install gcc compilers. (Note: $ is bash command line)
  
@@ -28,7 +28,35 @@ sudo apt-get install ubuntu-desktop
  
  8. The CUDA Driver requires that the kernel headers and development packages for the running version of the kernel be installed at the time of the driver installation, as well whenever the driver is rebuilt.
 
-  Read more at: http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ixzz5Af7WupiO 
-  
-  Run command: $sudo apt-get install linux-headers-$(uname -r)
+    Read more at: http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ixzz5Af7WupiO 
+    Run command: $sudo apt-get install linux-headers-$(uname -r)
  
+9. Installing CUDA drivers some times creates issues with X-server (desktop) causing infinite login loop. In this installation, we are interested in only using the NVidia GPU for computing only. Therefore, no need to create an xorg.conf file. If you have one, remove it (assuming you have a fresh OS install). $ sudo rm /etc/X11/xorg.conf
+
+10. To install the Display Driver, the Nouveau drivers must first be disabled. The Nouveau drivers are loaded if the following command prints anything:
+$ lsmod | grep nouveau
+
+    To disable nouveau driver:
+    Create a file at sudo nano /usr/lib/modprobe.d/blacklist-nouveau.conf with the following contents:
+    blacklist nouveau
+    
+    options nouveau modeset=0
+    
+    save and exit (ctrl+O+enter, ctrl+x+enter)
+    
+11. Run $sudo update-initramfs -u
+
+12. Reboot the computer and make sure X-server (desktop) works fine.
+
+13. Press ctrl+alt+f1 to enter to command-line mode, login with username and password.
+
+14. To install the NVidia Cuda toolkit, the X-server (desktop) should be stopped. Run $ sudo service lightdm stop
+
+15. Check if desktop service is stopped: sudo service lightdm status
+
+16. 
+
+
+
+
+
