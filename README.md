@@ -54,7 +54,18 @@ $ lsmod | grep nouveau
 
 15. Check if desktop service is stopped: sudo service lightdm status
 
-16. 
+16. Move to the directory where the cuda toolkit is downloaded (default will be downloads folder). Execute the command
+
+    $ sudo sh cuda_9.0.176_384.81_linux.run --no-opengl-libs
+    
+    Make sure to run with no opengl support, otherwise the desktop will not work. 
+    
+    Follow the instructions on the screen:
+    - EULA acceptance
+    - Yes to install nvidia driver
+    - Yes to install nvidia toolkit (default directory)
+    - Yes to create symbolic link to /usr/local/cuda
+    - Yes to install nvidia samples (default directory)
 
 
 
