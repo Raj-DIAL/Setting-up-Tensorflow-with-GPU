@@ -90,7 +90,7 @@ Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
     
  21. Goto samples folders (default in /home/usr/$samplesfolder) and do $make
  
- 22. Find and run deviceQuery and ./bandwidthTest under ~/NVIDIA_CUDA-9.0_Samples, both should PASS.
+ 22. Find and run $./deviceQuery and $./bandwidthTest under ~/NVIDIA_CUDA-9.0_Samples, both should PASS.
  
  23. Reboot and login in to desktop. GPU driver and cuda are all set up now.
  
@@ -101,7 +101,40 @@ Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
    - Download cuDNN v7.0.5 Developer Library for Ubuntu16.04 (Deb)
    - Download cuDNN v7.0.5 Code Samples and User Guide for Ubuntu16.04 (Deb)
    
-25. 
+25. Install cuDNN
+    - $sudo dpkg -i libcudnn7_7.0.5.15-1+cuda9.1_amd64.deb
+    - $sudo dpkg -i libcudnn7-dev_7.0.5.15-1+cuda9.1_amd64.deb
+    - $sudo dpkg -i libcudnn7-doc_7.0.5.15-1+cuda9.1_amd64.deb
+ 
+ 26. Verify cuDNN installation
+    - $cp -r /usr/src/cudnn_samples_v7/ $HOME
+    - $cd  $HOME/cudnn_samples_v7/mnistCUDNN
+    - $make clean && make
+    - $./mnistCUDNN
+    
+    The result should be PASS! Now cuDNN should have been installed.
+  
+  27. Before installing tensorflow, install the dependencies.
+     - $sudo apt-get install libcupti-dev
+     - $echo 'export LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
+    
+  28. Install tensorflow with GPU support in virtualenv (Python 3)
+  
+      - $ sudo apt-get install python3-pip python3-dev python-virtualenv # for Python 3.n
+      -  virtualenv --system-site-packages -p python3 targetDirectory # for Python 3.n (assume that targetDirectory is ~/tensorflow)
+      - $ source ~/tensorflow/bin/activate # bash, sh, ksh, or zsh (Activate environment)
+      - (tensorflow)$ easy_install -U pip # Install pip in tensorflow environment
+      - (tensorflow)$ pip3 install --upgrade tensorflow-gpu # for Python 3.n and GPU
+     
+   29. Verify tensorflow installation:
+   
+    python
+
+    import tensorflow as tf
+    hello = tf.constant('Hello, TensorFlow!')
+    sess = tf.Session()
+    print(sess.run(hello))
+      
 
 
 
