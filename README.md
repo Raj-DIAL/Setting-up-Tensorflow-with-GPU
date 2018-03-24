@@ -74,15 +74,25 @@ Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
  17. Installation should be complete now. Do $sudo modprobe nvidia (no output should be produced)
  
  18. Set Environment path variables:
+ 
     $ export PATH=/usr/local/cuda-9.0/bin:$PATH
+    
     $ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH
     
     Note: This depends on the cuda version
  19. Verify the driver version:
-  $ cat /proc/driver/nvidia/version
+  
+    $ cat /proc/driver/nvidia/version
 
  20. Check CUDA driver version:
-  $ nvcc -V
+  
+    $ nvcc -V
+    
+ 21. Goto samples folders (default in /home/usr/$samplesfolder) and do $make
+ 
+ 22. Find and run deviceQuery and ./bandwidthTest under ~/NVIDIA_CUDA-9.0_Samples, both should PASS.
+ 
+ 23. Reboot and login in to desktop. GPU driver and cuda are all set up now.
 
 
 
