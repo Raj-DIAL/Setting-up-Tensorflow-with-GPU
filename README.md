@@ -66,6 +66,23 @@ $ lsmod | grep nouveau
     - Yes to install nvidia toolkit (default directory)
     - Yes to create symbolic link to /usr/local/cuda
     - Yes to install nvidia samples (default directory)
+    - No  to rebuilding any Xserver configurations with Nvidia. If the GPU used for display is an NVIDIA GPU, the X server configuration file, /etc/X11/xorg.conf, may need to be modified. In some cases, nvidia-xconfig can be used to automatically generate a xorg.conf file that works for the system. For non-standard systems, such as those with more than one GPU, it is recommended to manually edit the xorg.conf file. Consult the xorg.conf documentation for more information.
+
+Read more at: http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#ixzz5AfDpShg7 
+Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
+    
+ 17. Installation should be complete now. Do $sudo modprobe nvidia (no output should be produced)
+ 
+ 18. Set Environment path variables:
+    $ export PATH=/usr/local/cuda-9.0/bin:$PATH
+    $ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH
+    
+    Note: This depends on the cuda version
+ 19. Verify the driver version:
+  $ cat /proc/driver/nvidia/version
+
+ 20. Check CUDA driver version:
+  $ nvcc -V
 
 
 
