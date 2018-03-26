@@ -137,7 +137,10 @@ Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
       
 
 
-
+    30. Miscellanous installation
+     
+    - Install jupyter notebook: pip3 install jupyter notebook
+    
 
 
 
