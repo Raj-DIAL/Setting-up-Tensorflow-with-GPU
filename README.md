@@ -152,7 +152,12 @@ enabled=true
 restart lightdm
 XDMCP on ubuntu
 
+Adding Users:
 
+$sudo adduser username
+
+Giving sudo rights:
+$sudo usermod -aG sudo username
 
 Reference:
 1. http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#introduction
