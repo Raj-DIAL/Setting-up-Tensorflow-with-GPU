@@ -143,6 +143,15 @@ Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
     
 
 
+/etc/lightdm/ightdm.conf
+
+[XDMCPServer]
+
+enabled=true
+
+restart lightdm
+XDMCP on ubuntu
+
 
 
 Reference:
