@@ -142,19 +142,9 @@ Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
     - Install jupyter notebook: pip3 install jupyter notebook
     
 
-
-/etc/lightdm/ightdm.conf
-
-[XDMCPServer]
-
-enabled=true
-
-restart lightdm
-XDMCP on ubuntu
-
 Adding Users:
 
-$sudo adduser username
+$sudo adduser disabled-password username
 
 Giving sudo rights:
 $sudo usermod -aG sudo username
